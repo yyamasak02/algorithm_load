@@ -3,15 +3,15 @@
 ## 🚀 Project Overview
 This project focuses on solving problems from competitive programming contests. Currently, it includes solutions for:
 
-- **Contest**: [AtCoder ABC377](https://atcoder.jp/contests/abc377)
-- **Task**: [ABC377 D](https://atcoder.jp/contests/abc377/tasks/abc377_d) ✅
+- **Contest**: 
+	- [AtCoder ABC377](https://atcoder.jp/contests/abc377)
+
 
 ## ✅ Contest Done List
 - [ABC377](https://atcoder.jp/contests/abc377) - Completed
 
 ## 📝 To Do
-- Implement and refine solutions for the problems listed above.
-- Add additional features or optimizations as necessary.
+- [ABC377 D](https://atcoder.jp/contests/abc377/tasks/abc377_d)
 
 ## 🛠️ Features
 - Solutions are organized by contest.

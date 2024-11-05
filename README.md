@@ -5,13 +5,17 @@ This project focuses on solving problems from competitive programming contests. 
 
 - **Contest**: 
 	- [AtCoder ABC377](https://atcoder.jp/contests/abc377)
+	- [AtCoder ABC378](https://atcoder.jp/contests/abc378)
 
 
 ## ✅ Contest Done List
 - [ABC377](https://atcoder.jp/contests/abc377) - Completed
+- [ABC378](https://atcoder.jp/contests/abc378) - in progress
 
 ## 📝 To Do
-- [ABC377 D](https://atcoder.jp/contests/abc377/tasks/abc377_d)
+- [ABC378 A](https://atcoder.jp/contests/abc377/tasks/abc378_a)
+- [ABC378 B](https://atcoder.jp/contests/abc377/tasks/abc378_b)
+- [ABC378 D](https://atcoder.jp/contests/abc377/tasks/abc378_d)
 
 ## 🛠️ Features
 - Solutions are organized by contest.

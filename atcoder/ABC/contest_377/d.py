@@ -1,32 +1,17 @@
 # https://atcoder.jp/contests/abc377/tasks/abc377_d
 
 N, M = map(int, input().split())
-section = [0 for i in range(M+1)]
-ans = 0
-columtive = 0
-start,end = -1, 0
-
-def cal_avail(start, end):
-    kosuu = end - start
-    print(kosuu)
-    return (kosuu * (kosuu * 1)) // 2
+section: list = [1 for i in range(M+1)]
+ans: int = 0
+L, R = 0, 0
 
 for _ in range(N):
-    L,R = map(int, input().split())
-    section[L] += 1
-    section[R] -= 1
+    L, R = map(int, input().split())
+    section[R] = max(section[R], L+1)
 
-print(section)
-for i in range(M):
-    columtive += section[i+1]
-    if columtive == 0 and start == -1:
-        start = i
-    elif columtive != 0:
-        if start != -1:
-            ans += cal_avail(start, i)
-            start = -1
+for i in range(1, M+1):
+    section[i] = max(section[i], section[i-1])
 
-if columtive == -1:
-    ans += cal_avail(start, M)
+for i in range(1, M+1):
+    ans += i - section[i] + 1
 print(ans)
-        

@@ -28,10 +28,10 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC405](https://atcoder.jp/contests/abc405) - Completed
 
 ## 📝 To Do
-- [ABC404: D](https://atcoder.jp/contests/abc404/d)
-- [ABC404: E](https://atcoder.jp/contests/abc404/e)
-- [ABC405: D](https://atcoder.jp/contests/abc405/d)
-- [ABC405: E](https://atcoder.jp/contests/abc405/e)
+- [ABC404: D](https://atcoder.jp/contests/abc404/tasks/abc404_d)
+- [ABC404: E](https://atcoder.jp/contests/abc404/tasks/abc404_e)
+- [ABC405: D](https://atcoder.jp/contests/abc405/tasks/abc405_d)
+- [ABC405: E](https://atcoder.jp/contests/abc405/tasks/abc405_e)
 
 ## 🛠️ Features
 - Solutions are organized by contest.

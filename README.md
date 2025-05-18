@@ -13,11 +13,13 @@ This project focuses on solving problems from competitive programming contests. 
 	- [AtCoder ABC403](https://atcoder.jp/contests/abc403)
 	- [AtCoder ABC404](https://atcoder.jp/contests/abc404)
 	- [AtCoder ABC405](https://atcoder.jp/contests/abc405)
+	- [AtCoder ABC406](https://atcoder.jp/contests/abc406)
 
 
 ## ✅ Contest Done List
 - [ABC377](https://atcoder.jp/contests/abc377) - Completed
 - [ABC378](https://atcoder.jp/contests/abc378) - Completed
+- [ABC397](https://atcoder.jp/contests/abc397) - In Progress
 - [ABC398](https://atcoder.jp/contests/abc398) - Completed
 - [ABC399](https://atcoder.jp/contests/abc398) - Completed
 - [ABC400](https://atcoder.jp/contests/abc400) - Completed
@@ -26,12 +28,14 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC403](https://atcoder.jp/contests/abc403) - Completed
 - [ABC404](https://atcoder.jp/contests/abc404) - Completed
 - [ABC405](https://atcoder.jp/contests/abc405) - Completed
+- [ABC406](https://atcoder.jp/contests/abc406) - Completed
 
 ## 📝 To Do
-- [ABC404: D](https://atcoder.jp/contests/abc404/tasks/abc404_d)
+- [ABC397: D](https://atcoder.jp/contests/abc397/tasks/abc397_d)
+- [ABC397: E](https://atcoder.jp/contests/abc397/tasks/abc397_e)
 - [ABC404: E](https://atcoder.jp/contests/abc404/tasks/abc404_e)
-- [ABC405: D](https://atcoder.jp/contests/abc405/tasks/abc405_d)
 - [ABC405: E](https://atcoder.jp/contests/abc405/tasks/abc405_e)
+- [ABC406: E](https://atcoder.jp/contests/abc406/tasks/abc406_e)
 
 ## 🛠️ Features
 - Solutions are organized by contest.

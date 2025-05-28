@@ -1,51 +1,41 @@
-def get_max_xor(fields, w, h):
-    max_xor = 0
-    current_xor = 0
+def solve(h, w, fields):
+    # 初期状態（ドミノなし）
+    possible_domino = [0]
+    
+    # 縦横のドミノのパターン
+    domino_vertical = (1 << w) + 1
+    print(bin(domino_vertical))
+    domino_horizontal = 3
+    
+    # 各マスについてドミノの配置を試す
     for i in range(h):
         for j in range(w):
-            current_xor ^= fields[i][j]
-    max_xor = max(max_xor, current_xor)
+            bit = i * w + j
+            tmp = []
+            for b in possible_domino:
+                print(bin(b))
+                # 横方向のドミノ
+                if j + 1 < w and not (b & (domino_horizontal << bit)):
+                    tmp.append(b | (domino_horizontal << bit))
+                # 縦方向のドミノ
+                if i + 1 < h and not (b & (domino_vertical << bit)):
+                    tmp.append(b | (domino_vertical << bit))
+            print(tmp)
+            possible_domino.extend(tmp)
     
-    for mask in range(1 << (h * w)):
-        used = [[False for _ in range(w)] for _ in range(h)]
-        valid = True
-        domino_count = 0
+    # 各配置パターンに対してXORを計算
+    ans = 0
+    print(possible_domino)
+    for b in possible_domino:
+        now = 0
         for i in range(h):
             for j in range(w):
-                if not valid:
-                    break
-                pos = i * w + j
-                if (mask >> pos) & 1:
-                    if j + 1 < w and not used[i][j] and not used[i][j+1]:
-                        used[i][j] = used[i][j+1] = True
-                        domino_count += 1
-                    elif i + 1 < h and not used[i][j] and not used[i+1][j]:
-                        used[i][j] = used[i+1][j] = True
-                        domino_count += 1
-                    else:
-                        valid = False
-                        break
-        if not valid:
-            continue
-        current_xor = 0
-        for i in range(h):
-            for j in range(w):
-                if not used[i][j]:
-                    current_xor ^= fields[i][j]
-        max_xor = max(max_xor, current_xor)
-    return max_xor
-
-def generate_parentheses(n):
-    def backtrack(s, left, right):
-        if len(s) == 2 * n:
-            print(s)
-            return
-        if left < n:
-            backtrack(s + '(', left + 1, right)
-        if right < left:
-            backtrack(s + ')', left, right + 1)
+                bit = i * w + j
+                if not (b & (1 << bit)):  # ドミノが置かれていないマス
+                    now ^= fields[i][j]
+        ans = max(ans, now)
     
-    backtrack('', 0, 0)
+    return ans
 
 if __name__ == "__main__":
     h, w = map(int, input().split())
@@ -53,7 +43,4 @@ if __name__ == "__main__":
     for _ in range(h):
         a = list(map(int, input().split()))
         fields.append(a)
-    res = get_max_xor(fields, w, h)
-    print(res)
-    n = int(input())
-    generate_parentheses(n)
+    print(solve(h, w, fields))

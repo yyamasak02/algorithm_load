@@ -3,7 +3,7 @@
 ## 🚀 Project Overview
 This project focuses on solving problems from competitive programming contests. Currently, it includes solutions for:
 
-- **Contest**: 
+- **Contest**:
 	- [AtCoder ABC377](https://atcoder.jp/contests/abc377)
 	- [AtCoder ABC378](https://atcoder.jp/contests/abc378)
 	- [AtCoder ABC394](https://atcoder.jp/contests/abc394)
@@ -25,6 +25,8 @@ This project focuses on solving problems from competitive programming contests. 
 	- [AtCoder ABC410](https://atcoder.jp/contests/abc410)
 	- [AtCoder ABC411](https://atcoder.jp/contests/abc411)
 	- [AtCoder ABC412](https://atcoder.jp/contests/abc412)
+	- [AtCoder ABC414](https://atcoder.jp/contests/abc414)
+	- [AtCoder ABC415](https://atcoder.jp/contests/abc415)
 
 
 ## ✅ Contest Done List
@@ -40,6 +42,14 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC404](https://atcoder.jp/contests/abc404) - Completed
 - [ABC405](https://atcoder.jp/contests/abc405) - Completed
 - [ABC406](https://atcoder.jp/contests/abc406) - Completed
+- [ABC407](https://atcoder.jp/contests/abc407) - Completed
+- [ABC408](https://atcoder.jp/contests/abc408) - Completed
+- [ABC410](https://atcoder.jp/contests/abc410) - Completed
+- [ABC411](https://atcoder.jp/contests/abc411) - Completed
+- [ABC412](https://atcoder.jp/contests/abc412) - Completed
+- [ABC414](https://atcoder.jp/contests/abc414) - Completed
+- [ABC415](https://atcoder.jp/contests/abc415) - Completed
+	- [dialog](./dialog/atcoder_ABC415.txt)
 
 ## 📝 To Do
 - [ABC411: D](https://atcoder.jp/contests/abc397/tasks/abc411_d)

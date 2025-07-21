@@ -1,0 +1,55 @@
+{
+  "contest": {
+    "id": "abc415",
+    "title": "Japan Registry Services (JPRS) Programming Contest 2025#2 (AtCoder Beginner Contest 415)",
+    "url": "https://atcoder.jp/contests/abc415"
+  },
+  "tasks": [
+    {
+      "id": "abc415_a",
+      "label": "A",
+      "title": "Unsupported Type",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc415_b",
+      "label": "B",
+      "title": "Pick Two",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_b"
+    },
+    {
+      "id": "abc415_c",
+      "label": "C",
+      "title": "Mixture",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_c"
+    },
+    {
+      "id": "abc415_d",
+      "label": "D",
+      "title": "Get Many Stickers",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_d"
+    },
+    {
+      "id": "abc415_e",
+      "label": "E",
+      "title": "Hungry Takahashi",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_e"
+    },
+    {
+      "id": "abc415_f",
+      "label": "F",
+      "title": "Max Combo",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_f"
+    },
+    {
+      "id": "abc415_g",
+      "label": "G",
+      "title": "Get Many Cola",
+      "url": "https://atcoder.jp/contests/abc415/tasks/abc415_g"
+    }
+  ]
+}

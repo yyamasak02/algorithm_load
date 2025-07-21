@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from collections import deque
+
 
 @dataclass
 class Pair:
@@ -7,33 +9,23 @@ class Pair:
 
 
 q = int(input())
-quene = []
+queue = deque()
 for i in range(q):
     query = list(map(int, input().split()))
     if query[0] == 1:
-        c = query[1]
-        x = query[2]
-        quene.append(
-            Pair(
-                num=x,
-                count=c
-            )
-        )
+        c, x = query[1], query[2]
+        queue.append(Pair(num=x, count=c))
     else:
         k = query[1]
-        start = 0
         ans = 0
-        while k > 0:
-            print("try")
-            if quene[start].count > k:
-                ans += quene[start].num * k
-                quene[start].count -= k
-                break
-            else:
-                nokori = quene.pop(0)
-                ans += nokori.num * nokori.count
-                k -= nokori.count
-            start += 1
+        while queue and queue[0].count <= k:
+            # print("before: ", queue)
+            nokori = queue.popleft()
+            ans += nokori.num * nokori.count
+            k -= nokori.count
+            # print("after: ", queue)
+        # print(k)
+        if k > 0 and queue:
+            ans += queue[0].num * k
+            queue[0].count -= k
         print(ans)
-
-

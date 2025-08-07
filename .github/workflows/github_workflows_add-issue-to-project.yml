@@ -1,0 +1,15 @@
+name: Add Issue to Project
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue to GitHub Project (Beta)
+        env:
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }} # 作成したPATを利用
+        run: |
+          gh project item-add 1 --owner yuhe-02 --url "${{ github.event.issue.html_url }

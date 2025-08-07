@@ -18,9 +18,8 @@ jobs:
 
       - name: Add issue to GitHub Project (Beta)
         run: |
-          gh project item-add \
+          gh project item-add 1 \
             --owner yuhe-02 \
-            --project "task_manager" \
             --url "${{ github.event.issue.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}

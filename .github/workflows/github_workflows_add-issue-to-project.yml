@@ -11,5 +11,5 @@ jobs:
       - name: Add issue to GitHub Project (Beta)
         env:
           GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }} # 作成したPATを利用
-        run: |
+        run:
           gh project item-add 1 --owner yuhe-02 --url "${{ github.event.issue.html_url }

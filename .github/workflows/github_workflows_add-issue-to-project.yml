@@ -8,8 +8,22 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Add issue to GitHub Project (Beta)
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GH_PROJECT_TOKEN }}" | gh auth login --with-token
         env:
-          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }} # 作成したPATを利用
-        run:
-          gh project item-add 1 --owner yuhe-02 --url "${{ github.event.issue.html_url }
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
+
+      - name: Add label to issue
+        run: |
+          gh issue edit "${{ github.event.issue.number }}" --add-label "algo"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
+
+      - name: Add issue to GitHub Project (Beta)
+        run: |
+          gh project item-add \
+            --owner yuhe-02 \
+            --project "task_manager" \
+            --url "${{ github.event.issue.html_url }}"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}

@@ -8,11 +8,6 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Authenticate GitHub CLI
-        run: echo "${{ secrets.GH_PROJECT_TOKEN }}" | gh auth login --with-token
-        env:
-          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
-
       - name: Add label to issue
         run: |
           gh issue edit "${{ github.event.issue.number }}" --add-label "algo"

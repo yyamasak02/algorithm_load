@@ -10,9 +10,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Add label to issue
         run: |
           gh issue edit "${{ github.event.issue.number }}" --add-label "algo"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
+
+      - name: Assign issue to user
+        run: |
+          gh issue edit "${{ github.event.issue.number }}" \
+            --add-assignee yuhe-02
         env:
           GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
 

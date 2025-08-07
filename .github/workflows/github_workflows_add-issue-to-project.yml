@@ -8,6 +8,8 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Add label to issue
         run: |
           gh issue edit "${{ github.event.issue.number }}" --add-label "algo"

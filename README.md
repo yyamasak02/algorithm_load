@@ -28,6 +28,8 @@ This project focuses on solving problems from competitive programming contests. 
 	- [AtCoder ABC414](https://atcoder.jp/contests/abc414)
 	- [AtCoder ABC415](https://atcoder.jp/contests/abc415)
 	- [AtCoder ABC416](https://atcoder.jp/contests/abc416)
+	- [AtCoder ABC417](https://atcoder.jp/contests/abc417)
+	- [AtCoder ABC418](https://atcoder.jp/contests/abc418)
 
 
 ## ✅ Contest Done List
@@ -53,6 +55,10 @@ This project focuses on solving problems from competitive programming contests. 
 	- [dialog](./dialog/atcoder_ABC415.txt)
 - [ABC416](https://atcoder.jp/contests/abc416) - Completed
 	- [dialog](./dialog/atcoder_ABC416.txt)
+- [ABC417](https://atcoder.jp/contests/abc417) - Completed
+	- [dialog](./dialog/atcoder_ABC417.txt)
+- [ABC418](https://atcoder.jp/contests/abc418) - Completed
+	- [dialog](./dialog/atcoder_ABC418.txt)
 
 ## 📝 To Do
 - [ABC411: D](https://atcoder.jp/contests/abc411/tasks/abc411_d)
@@ -61,6 +67,9 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC412: D](https://atcoder.jp/contests/abc412/tasks/abc412_d)
 - [ABC412: E](https://atcoder.jp/contests/abc412/tasks/abc412_e)
 - [ABC416: E](https://atcoder.jp/contests/abc416/tasks/abc416_e)
+- [ABC417: D](https://atcoder.jp/contests/abc417/tasks/abc417_d)
+- [ABC417: E](https://atcoder.jp/contests/abc417/tasks/abc417_e)
+- [ABC418: E](https://atcoder.jp/contests/abc418/tasks/abc418_e)
 
 ## 🛠️ Features
 - Solutions are organized by contest.

@@ -1,0 +1,6 @@
+# a = list(map(int, input().split()))
+# b = int(input())
+# c = input()
+n, a, b = map(int, input().split())
+s = input()
+print(s[a : n - b])

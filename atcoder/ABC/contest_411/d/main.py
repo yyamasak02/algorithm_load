@@ -1,23 +1,34 @@
-import heapq
-from collections import defaultdict
+from collections import deque
 
-n, m = map(int, input().split())
-g = defaultdict(list)
-for _ in range(m):
-    a, b, w = map(int, input().split())
-    g[a].append((b, w))
-xor_values = [set() for _ in range(n + 1)]
-xor_values[1].add(0)
-pq = [(0, 1)]
-while pq:
-    current_xor, v = heapq.heappop(pq)
-    for next_v, weight in g[v]:
-        new_xor = current_xor ^ weight
-        if new_xor in xor_values[next_v]:
-            continue
-        xor_values[next_v].add(new_xor)
-        heapq.heappush(pq, (new_xor, next_v))
-if not xor_values[n]:
-    print(-1)
-else:
-    print(min(xor_values[n]))
+n: int = None
+q: int = None
+query: list[any] = None
+
+n, q = map(int, input().split())
+server: list = []
+requests: deque[tuple[int, int, any]] = deque()
+
+for i in range(q):
+    query = input().split()
+    if query[0] == "1":
+        requests.append((int(query[0]), int(query[1]), ""))
+    elif query[0] == "2":
+        requests.append((int(query[0]), int(query[1]), query[2]))
+    else:
+        requests.append((int(query[0]), int(query[1]), ""))
+
+same_number: int = None
+while requests:
+    query = requests.pop()
+    if same_number is None:
+        if query[0] == 3:
+            same_number = query[1]
+    elif query[1] == same_number:
+        if query[0] == 1:
+            same_number = None
+        elif query[0] == 2:
+            server.append(query[2])
+        else:
+            same_number = query[1]
+result = "".join(reversed(server))
+print(result)

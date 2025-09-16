@@ -1,7 +1,7 @@
 ---
-name: contest_${contest_no} 復習
+name: AtCoderコンテスト復習用
 about: コンテスト反省用
-title: ''
+title: ABC_${No} 復習
 labels: algo
 assignees: yyamasak02
 

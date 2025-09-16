@@ -20,14 +20,14 @@ jobs:
       - name: Assign issue to user
         run: |
           gh issue edit "${{ github.event.issue.number }}" \
-            --add-assignee yuhe-02
+            --add-assignee yyamasak02
         env:
           GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
 
       - name: Add issue to GitHub Project (Beta)
         run: |
           gh project item-add 1 \
-            --owner yuhe-02 \
+            --owner yyamasak02 \
             --url "${{ github.event.issue.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}

@@ -10,6 +10,7 @@ This project focuses on solving problems from competitive programming contests. 
 | [ABC376](https://atcoder.jp/contests/abc376) | Completed | - |
 | [ABC377](https://atcoder.jp/contests/abc377) | Completed | - |
 | [ABC378](https://atcoder.jp/contests/abc378) | Completed | - |
+| [ABC390](https://atcoder.jp/contests/abc390) | In Progress | - |
 | [ABC391](https://atcoder.jp/contests/abc391) | Completed | - |
 | [ABC392](https://atcoder.jp/contests/abc392) | Completed | - |
 | [ABC393](https://atcoder.jp/contests/abc393) | Completed | - |
@@ -41,6 +42,8 @@ This project focuses on solving problems from competitive programming contests. 
 
 
 ## 📝 To Do
+- [ABC390: D](https://atcoder.jp/contests/abc390/tasks/abc390_d)
+- [ABC390: E](https://atcoder.jp/contests/abc390/tasks/abc390_e)
 - [ABC411: D](https://atcoder.jp/contests/abc411/tasks/abc411_d)
 - [ABC411: E](https://atcoder.jp/contests/abc411/tasks/abc411_e)
 - [ABC412: C](https://atcoder.jp/contests/abc412/tasks/abc412_c)

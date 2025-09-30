@@ -39,6 +39,8 @@ This project focuses on solving problems from competitive programming contests. 
 | [ABC421](https://atcoder.jp/contests/abc421) | Completed | - |
 | [ABC422](https://atcoder.jp/contests/abc422) | Completed | - |
 | [ABC423](https://atcoder.jp/contests/abc423) | Completed | - |
+| [ABC424](https://atcoder.jp/contests/abc424) | Completed | - |
+| [ABC425](https://atcoder.jp/contests/abc425) | Completed | - |
 
 
 ## 📝 To Do
@@ -54,3 +56,7 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC417: E](https://atcoder.jp/contests/abc417/tasks/abc417_e)
 - [ABC418: E](https://atcoder.jp/contests/abc418/tasks/abc418_e)
 - [ABC419: E](https://atcoder.jp/contests/abc419/tasks/abc419_e)
+- [ABC424: D](https://atcoder.jp/contests/abc424/tasks/abc424_d)
+- [ABC424: E](https://atcoder.jp/contests/abc424/tasks/abc424_e)
+- [ABC425: D](https://atcoder.jp/contests/abc425/tasks/abc425_d)
+- [ABC425: E](https://atcoder.jp/contests/abc425/tasks/abc425_e)

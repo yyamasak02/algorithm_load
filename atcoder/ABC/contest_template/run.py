@@ -2,7 +2,6 @@ import os
 import argparse
 import time
 import sys
-import importlib
 import yaml
 import subprocess
 
@@ -28,6 +27,11 @@ def get_files(folder: str) -> list[str]:
 def run_tests(files: list[str], folder: str, timeout: int, language: str) -> None:
     for file in files:
         print(f"Running test: {file}")
+        d: dict[str, str] = {
+            "python": f"python {folder}/main.py",
+            "java": f"java {folder}/Main.java",
+            "rust": f"rustc {folder}/main.rs -o {folder}/rust_main; ./rust_main",
+        }
         try:
             with open(file, "r") as f:
                 old_stdin = sys.stdin
@@ -35,15 +39,9 @@ def run_tests(files: list[str], folder: str, timeout: int, language: str) -> Non
                 output = None
                 try:
                     start = time.perf_counter()
-                    if language == "python":
-                        module = importlib.import_module(f"{folder}.main")
-                        output = module.main()
-                    if language == "java":
-                        subprocess.run(
-                            ["java", f"{folder}/Main.java"],
-                            stdin=sys.stdin,
-                            stdout=output,
-                        )
+                    subprocess.run(
+                        d[language], stdin=sys.stdin, stdout=output, shell=True
+                    )
                 finally:
                     sys.stdin = old_stdin
             if output is None:
@@ -62,7 +60,7 @@ def main():
     parser.add_argument("-p", "--pro", type=str, default="python")
     parser.add_argument("-d", "--dir", type=str, default=None)
     args = parser.parse_args()
-    if args.pro not in ["python", "java"]:
+    if args.pro not in ["python", "java", "rust"]:
         print(f"[ERROR] not support {args.pro}")
         return
     if args.dir is None or not os.path.exists(args.dir):

@@ -4,47 +4,10 @@
 This project focuses on solving problems from competitive programming contests. Currently, it includes solutions for:
 
 ## ✅ Contest Done List
-
-| Contest | Status     | Dialog Link |
-|---------|------------|-------------|
-| [ABC376](https://atcoder.jp/contests/abc376) | Completed | - |
-| [ABC377](https://atcoder.jp/contests/abc377) | Completed | - |
-| [ABC378](https://atcoder.jp/contests/abc378) | Completed | - |
-| [ABC389](https://atcoder.jp/contests/abc389) | In Progress | - |
-| [ABC390](https://atcoder.jp/contests/abc390) | In Progress | - |
-| [ABC391](https://atcoder.jp/contests/abc391) | Completed | - |
-| [ABC392](https://atcoder.jp/contests/abc392) | Completed | - |
-| [ABC393](https://atcoder.jp/contests/abc393) | Completed | - |
-| [ABC397](https://atcoder.jp/contests/abc397) | Completed | - |
-| [ABC398](https://atcoder.jp/contests/abc398) | Completed | - |
-| [ABC399](https://atcoder.jp/contests/abc399) | Completed | - |
-| [ABC400](https://atcoder.jp/contests/abc400) | Completed | - |
-| [ABC401](https://atcoder.jp/contests/abc401) | Completed | - |
-| [ABC402](https://atcoder.jp/contests/abc402) | Completed | - |
-| [ABC403](https://atcoder.jp/contests/abc403) | Completed | - |
-| [ABC404](https://atcoder.jp/contests/abc404) | Completed | - |
-| [ABC405](https://atcoder.jp/contests/abc405) | Completed | - |
-| [ABC406](https://atcoder.jp/contests/abc406) | Completed | - |
-| [ABC407](https://atcoder.jp/contests/abc407) | Completed | - |
-| [ABC408](https://atcoder.jp/contests/abc408) | Completed | - |
-| [ABC410](https://atcoder.jp/contests/abc410) | Completed | - |
-| [ABC411](https://atcoder.jp/contests/abc411) | In Progress | - |
-| [ABC412](https://atcoder.jp/contests/abc412) | In Progress | - |
-| [ABC414](https://atcoder.jp/contests/abc414) | Completed | - |
-| [ABC415](https://atcoder.jp/contests/abc415) | Completed | [dialog](./dialog/atcoder_ABC415.txt) |
-| [ABC416](https://atcoder.jp/contests/abc416) | In Progress | [dialog](./dialog/atcoder_ABC416.txt) |
-| [ABC417](https://atcoder.jp/contests/abc417) | In Progress | [dialog](./dialog/atcoder_ABC417.txt) |
-| [ABC418](https://atcoder.jp/contests/abc418) | In Progress | [dialog](./dialog/atcoder_ABC418.txt) |
-| [ABC419](https://atcoder.jp/contests/abc419) | In Progress | [dialog](./dialog/atcoder_ABC419.txt) |
-| [ABC420](https://atcoder.jp/contests/abc420) | Completed | - |
-| [ABC421](https://atcoder.jp/contests/abc421) | Completed | - |
-| [ABC422](https://atcoder.jp/contests/abc422) | Completed | - |
-| [ABC423](https://atcoder.jp/contests/abc423) | Completed | - |
-| [ABC424](https://atcoder.jp/contests/abc424) | In Progress | - |
-| [ABC425](https://atcoder.jp/contests/abc425) | Completed | - |
-
+- [スプレッドシート](https://docs.google.com/spreadsheets/d/1Du1_ymO2C6zmGgD4y6XKvnbX3vGm_Yj7R-LZvOXj8Hc/edit?gid=42241618#gid=42241618)
 
 ## 📝 To Do
+- [ABC366: D](https://atcoder.jp/contests/abc366/tasks/abc366_d)
 - [ABC389: E](https://atcoder.jp/contests/abc390/tasks/abc389_e)
 - [ABC390: D](https://atcoder.jp/contests/abc390/tasks/abc390_d)
 - [ABC390: E](https://atcoder.jp/contests/abc390/tasks/abc390_e)
@@ -60,3 +23,4 @@ This project focuses on solving problems from competitive programming contests. 
 - [ABC419: E](https://atcoder.jp/contests/abc419/tasks/abc419_e)
 - [ABC424: D](https://atcoder.jp/contests/abc424/tasks/abc424_d)
 - [ABC424: E](https://atcoder.jp/contests/abc424/tasks/abc424_e)
+- [ABC433: E](https://atcoder.jp/contests/abc424/tasks/abc433_e)

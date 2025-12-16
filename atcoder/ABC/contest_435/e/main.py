@@ -1,5 +1,6 @@
 from sortedcontainers import SortedList
 
+
 def main():
     n, q = map(int, input().split())
     black_list = SortedList()
@@ -7,16 +8,15 @@ def main():
     white_count = n
     d = {}
     for _ in range(q):
-        l, r = map(int, input().split())
-        counter = r - l
-        index = black_list.bisect_left(l)
+        ll, r = map(int, input().split())
+        counter = r - ll
+        index = black_list.bisect_left(ll)
         if element == index:
-            black_list.add(l)
+            black_list.add(ll)
             element += 1
             white_count -= counter + 1
-            d[l] = counter
+            d[ll] = counter
         else:
-            ll = []
             for i in range(index, element):
                 print(white_count)
     return

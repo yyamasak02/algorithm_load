@@ -1,30 +1,34 @@
-import sys
-
-sys.setrecursionlimit(10**9)
-
-
 def main():
     n, m = map(int, input().split())
-    edges = [tuple(map(int, input().split())) for _ in range(m)]
+    d = {i: set() for i in range(n)}
+    for i in range(m):
+        u, v = map(int, input().split())
+        u -= 1
+        v -= 1
+        d[u].add(v)
+    colors = [0] * n
+    result = 10**9
 
-    best = 10**9
-    colors = [-1] * (n + 1)
+    def calc_delete():
+        delete_count = 0
+        for key, values in d.items():
+            for value in values:
+                if colors[key] == colors[value]:
+                    delete_count += 1
+        return delete_count
 
-    def dfs(u):
-        nonlocal best
-        if u > n:
-            cnt = 0
-            for a, b in edges:
-                if colors[a] == colors[b]:
-                    cnt += 1
-            best = min(best, cnt)
+    def pattern(depth: int):
+        nonlocal result
+        if depth == n:
+            result = min(result, calc_delete())
             return
-        for c in (0, 1):
-            colors[u] = c
-            dfs(u + 1)
+        colors[depth] = 0
+        pattern(depth + 1)
+        colors[depth] = 1
+        pattern(depth + 1)
 
-    dfs(1)
-    print(best)
+    pattern(0)
+    print(result)
     return
 
 

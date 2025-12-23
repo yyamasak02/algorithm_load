@@ -1,7 +1,7 @@
 def main():
     s = list(input())
-    s_len = len(s)
-    s.pop(s_len // 2)
+    len_s = len(s)
+    s.pop(len_s // 2)
     print("".join(s))
     return
 

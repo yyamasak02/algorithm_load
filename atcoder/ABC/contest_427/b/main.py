@@ -1,17 +1,10 @@
-def ketawa(x: int) -> int:
-    s = list(str(x))
-    a = 0
-    for c in s:
-        a += int(c)
-    return a
-
-
 def main():
+    n = int(input())
     a = [1, 1]
-    for _ in range(100):
-        a.append(a[-1] + ketawa(a[-1]))
-    x = int(input())
-    print(a[x])
+    for i in range(2, n + 1):
+        list_i = list(map(int, list(str(a[-1]))))
+        a.append(a[-1] + sum(list_i))
+    print(a[n])
     return
 
 

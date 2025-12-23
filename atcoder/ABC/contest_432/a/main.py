@@ -1,8 +1,5 @@
 def main():
-    x = int(input())
-    a = list(map(int, list(map(str, x))))
-    a.sort()
-    print(a)
+    print("".join(sorted(input().split(), reverse=True)))
     return
 
 

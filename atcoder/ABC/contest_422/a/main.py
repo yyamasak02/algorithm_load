@@ -1,8 +1,14 @@
-query: str = input()
-i: int = int(query[0])
-j: int = int(query[2])
+def main():
+    s = input().split("-")
+    i, j = int(s[0]), int(s[1])
+    if j == 8:
+        i = i + 1
+        j = 1
+    else:
+        j += 1
+    print(f"{i}-{j}")
+    return
 
-if j < 8:
-    print(f"{i}-{j+1}")
-else:
-    print(f"{i+1}-{1}")
+
+if __name__ == "__main__":
+    main()

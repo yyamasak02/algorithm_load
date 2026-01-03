@@ -1,2 +1,6 @@
-a, b, c = map(int, input().split())
-print("Yes" if a == b or b == c or a == c else "No")
+def main():
+    return
+
+
+if __name__ == "__main__":
+    main()

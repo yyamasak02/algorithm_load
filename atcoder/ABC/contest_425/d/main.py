@@ -1,52 +1,54 @@
-from collections import deque
 import sys
-
-
-def inside(x: int, y: int, w: int, h: int) -> bool:
-    return 0 <= x < w and 0 <= y < h
+from collections import deque
 
 
 def main():
-    input = sys.stdin.readline
-    h, w = map(int, input().split())
+    input_data = sys.stdin.read().split()
+    if not input_data:
+        return
+    h = int(input_data[0])
+    w = int(input_data[1])
+    s = input_data[2:]
+
+    fields = [list(row) for row in s]
+    counts = [[0] * w for _ in range(h)]
     dirs = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-    grid = [[True if c == "#" else False for c in input().rstrip()] for _ in range(h)]
-    visited = [[0] * w for _ in range(h)]
-    q = deque()
+    for i in range(h):
+        for j in range(w):
+            if fields[i][j] == "#":
+                for dx, dy in dirs:
+                    nx, ny = j + dx, i + dy
+                    if 0 <= nx < w and 0 <= ny < h:
+                        counts[ny][nx] += 1
 
     counter = 0
-    for y in range(h):
-        for x in range(w):
-            if grid[y][x] is True:
-                q.append((x, y))
-                visited[y][x] = 1
+    d = deque()
+    for i in range(h):
+        for j in range(w):
+            if fields[i][j] == "#":
                 counter += 1
+            elif counts[i][j] == 1:
+                d.append((j, i))
 
-    while q:
-        x, y = q.popleft()
+    tmp_set = set()
+    while d:
+        x, y = d.popleft()
+        fields[y][x] = "#"
+        counter += 1
+
         for dx, dy in dirs:
-            tx, ty = x + dx, y + dy
-            if not inside(tx, ty, w, h):
-                continue
-            if grid[ty][tx] is True:
-                continue
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < w and 0 <= ny < h:
+                if fields[ny][nx] == ".":
+                    counts[ny][nx] += 1
+                    tmp_set.add((nx, ny))
 
-            near = 0
-            for ddx, ddy in dirs:
-                nx, ny = tx + ddx, ty + ddy
-                if (
-                    inside(nx, ny, w, h)
-                    and grid[ny][nx] is True
-                    and visited[ny][nx] <= visited[y][x]
-                ):
-                    near += 1
-
-            if near == 1:
-                grid[ty][tx] = True
-                visited[ty][tx] = visited[y][x] + 1
-                q.append((tx, ty))
-                counter += 1
+        if len(d) == 0:
+            for tx, ty in tmp_set:
+                if fields[ty][tx] == "." and counts[ty][tx] == 1:
+                    d.append((tx, ty))
+            tmp_set = set()
 
     print(counter)
 

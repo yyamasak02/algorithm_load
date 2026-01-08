@@ -1,0 +1,6 @@
+[tool.ruff]
+lint.select = ["E", "F", "I"]
+
+lint.ignore = [
+  "E731", # Do not assign a lambda expression
+]

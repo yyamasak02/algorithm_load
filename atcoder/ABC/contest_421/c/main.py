@@ -1,17 +1,20 @@
-n = int(input())
-s = input()
+def main():
+    n = int(input())
+    s = input()
+    odd_a_count = 0
+    even_a_count = 0
+    odd_progress = 1
+    even_progress = 2
+    for i in range(2 * n):
+        if s[i] == "A":
+            current = i + 1
+            odd_a_count += abs(odd_progress - current)
+            even_a_count += abs(even_progress - current)
+            odd_progress += 2
+            even_progress += 2
+    print(min(odd_a_count, even_a_count))
+    return
 
-ans = float("inf")
-finish_index_odd = 0
-finish_index_even = 1
-odd_ans = 0
-even_ans = 0
-for i in range(2 * n):
-    if s[i] == "A":
-        # 偶数配列にAを置く
-        odd_ans += abs(i - finish_index_odd)
-        finish_index_odd += 2
-        # 奇数配列にAを置く
-        even_ans += abs(i - finish_index_even)
-        finish_index_even += 2
-print(min(even_ans, odd_ans))
+
+if __name__ == "__main__":
+    main()

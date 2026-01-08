@@ -1,13 +1,14 @@
-def rev(x: int) -> int:
-    x_list = list(str(x))
-    x = 0
-    for index, v in enumerate(x_list):
-        x += int(v) * (10**index)
-    return x
+def main():
+    x, y = map(int, input().split())
+    ai = None
+    for i in range(3, 11):
+        target = str(x + y)
+        ai = int("".join(list(target)[::-1]))
+        x = y
+        y = ai
+    print(ai)
+    return
 
 
-x, y = map(int, input().split())
-a = [x, y]
-for i in range(2, 10):
-    a.append(rev(a[i - 2] + a[i - 1]))
-print(a[-1])
+if __name__ == "__main__":
+    main()

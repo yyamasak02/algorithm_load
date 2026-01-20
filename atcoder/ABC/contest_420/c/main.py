@@ -1,18 +1,22 @@
-n, q = map(int, input().split())
-a: list[int] = list(map(int, input().split()))
-b: list[int] = list(map(int, input().split()))
+def main():
+    n, q = map(int, input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    result = 0
+    for i in range(n):
+        result += min(a[i], b[i])
+    for _ in range(q):
+        query = input().split()
+        x, v = int(query[1]), int(query[2])
+        result -= min(a[x - 1], b[x - 1])
+        if query[0] == "A":
+            a[x - 1] = v
+        else:
+            b[x - 1] = v
+        result += min(a[x - 1], b[x - 1])
+        print(result)
+    return
 
-ans: int = 0
-for i in range(n):
-    ans += min(a[i], b[i])
-for i in range(q):
-    c, x, v = input().split()
-    x = int(x) - 1
-    v = int(v)
-    ans -= min(a[x], b[x])
-    if c == "A":
-        a[x] = v
-    else:
-        b[x] = v
-    ans += min(a[x], b[x])
-    print(ans)
+
+if __name__ == "__main__":
+    main()

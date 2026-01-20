@@ -1,47 +1,60 @@
 from collections import deque
 
-h, w = map(int, input().split())
-a = []
-sx, sy, gx, gy = None, None, None, None
-for i in range(h):
-    s = input()
-    a.append(s)
-    if s.find("S") != -1:
-        sx, sy = s.index("S"), i
-    if s.find("G") != -1:
-        gx, gy = s.index("G"), i
 
-visited = [[[False] * 2 for _ in range(w)] for __ in range(h)]
-d = deque()
-d.append((sx, sy, 0, 0))
-visited[sy][sx][0] = True
-ans = -1
-direction = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-while d:
-    x, y, state, dist = d.popleft()
-    if x == gx and y == gy:
-        ans = dist
-        break
-    for delta in direction:
-        nx = x + delta[0]
-        ny = y + delta[1]
-        if nx >= w or ny >= h or nx < 0 or ny < 0:
-            continue
-        c = a[ny][nx]
-        nstate = state
-        if c == "#":
-            continue
-        elif c == "?":
-            nstate = not state
-        elif c == "o" and nstate:
-            continue
-        elif c == "x" and not nstate:
-            continue
-        if visited[ny][nx][nstate] is False:
-            visited[ny][nx][nstate] = True
-            d.append((nx, ny, nstate, dist + 1))
+def main():
+    H, W = map(int, input().split())
+    fields: list[str] = [input().rstrip() for _ in range(H)]
+    costs: list[int] = [
+        [[float("inf") for _ in range(2)] for _ in range(W)] for _ in range(H)
+    ]
+    st, gt = (0, 0), (0, 0)
+    for i in range(H):
+        for j in range(W):
+            if fields[i][j] == "S":
+                st = (i, j)
+            if fields[i][j] == "G":
+                gt = (i, j)
+    dq: deque[int, int, int] = deque()
+    dq.append((*st, 0))
+    costs[st[0]][st[1]][0] = 0
 
-print(ans)
+    dirs = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    while dq:
+        cy, cx, flag = dq.popleft()
+        for dy, dx in dirs:
+            if H - 1 < cy + dy or cy + dy < 0:
+                continue
+            if W - 1 < cx + dx or cx + dx < 0:
+                continue
+            if fields[cy + dy][cx + dx] == "#":
+                continue
+            field_element = fields[cy + dy][cx + dx]
+            current_cost = (
+                costs[cy][cx][(flag + 1) % 2]
+                if fields[cy][cx] == "?"
+                else costs[cy][cx][flag % 2]
+            )
+            is_smaller = current_cost + 1 < costs[cy + dy][cx + dx][flag % 2]
+            if field_element in ["S", ".", "G", "?"] and is_smaller is True:
+                costs[cy + dy][cx + dx][flag % 2] = current_cost + 1
+                if field_element == "?":
+                    dq.append((cy + dy, cx + dx, flag + 1))
+                else:
+                    dq.append((cy + dy, cx + dx, flag))
+            elif field_element in ["o", "x"] and is_smaller is True:
+                if field_element == "o" and flag % 2 == 0:
+                    costs[cy + dy][cx + dx][flag % 2] = current_cost + 1
+                    dq.append((cy + dy, cx + dx, flag))
+                if field_element == "x" and is_smaller is True and flag % 2 == 1:
+                    costs[cy + dy][cx + dx][flag % 2] = current_cost + 1
+                    dq.append((cy + dy, cx + dx, flag))
+    result = min(costs[gt[0]][gt[1]])
+    if result == float("inf"):
+        print(-1)
+    else:
+        print(result)
+    return
 
-# print(sx, sy)
-# print(gx, gy)
+
+if __name__ == "__main__":
+    main()

@@ -1,21 +1,22 @@
 from bisect import bisect_left
 
-n, q = map(int, input().split())
-a = sorted(list(map(int, input().split())))
-columutive_a = [0 for _ in range(n + 1)]
-for index, s_a in enumerate(a):
-    columutive_a[index + 1] = columutive_a[index] + s_a
-columutive_a.pop(0)
-# print(columutive_a)
-for i in range(q):
-    b = int(input())
-    position_index = bisect_left(a, b)
-    if position_index >= n:
-        print(-1)
-        continue
-    result = (
-        (columutive_a[position_index - 1] if position_index > 0 else 0)
-        + ((b - 1) * (n - position_index - 1))
-        + b
-    )
-    print(result)
+
+def main():
+    N, Q = map(int, input().split())
+    a = sorted(list(map(int, input().split())))
+    col = [0]
+    for c in a:
+        col.append(col[-1] + c)
+
+    for _ in range(Q):
+        b = int(input())
+        index = bisect_left(a, b)
+        if index == N:
+            print(-1)
+        else:
+            print(col[index] + (N - index) * (b - 1) + 1)
+    return
+
+
+if __name__ == "__main__":
+    main()

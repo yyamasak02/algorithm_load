@@ -1,4 +1,6 @@
 def main():
+    s = input()
+    print(s.count("i") + s.count("j"))
     return
 
 

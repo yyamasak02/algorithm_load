@@ -1,0 +1,12 @@
+default_folders:
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+timeout: 2
+use_subprocess: false

@@ -1,0 +1,55 @@
+{
+  "contest": {
+    "id": "abc443",
+    "title": "Denso Create Programming Contest 2026（AtCoder Beginner Contest 443）",
+    "url": "https://atcoder.jp/contests/abc443"
+  },
+  "tasks": [
+    {
+      "id": "abc443_a",
+      "label": "A",
+      "title": "Append s",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc443_b",
+      "label": "B",
+      "title": "Setsubun",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_b"
+    },
+    {
+      "id": "abc443_c",
+      "label": "C",
+      "title": "Chokutter Addiction",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_c"
+    },
+    {
+      "id": "abc443_d",
+      "label": "D",
+      "title": "Pawn Line",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_d"
+    },
+    {
+      "id": "abc443_e",
+      "label": "E",
+      "title": "Climbing Silver",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_e"
+    },
+    {
+      "id": "abc443_f",
+      "label": "F",
+      "title": "Non-Increasing Number",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_f"
+    },
+    {
+      "id": "abc443_g",
+      "label": "G",
+      "title": "Another Mod of Linear Problem",
+      "url": "https://atcoder.jp/contests/abc443/tasks/abc443_g"
+    }
+  ]
+}

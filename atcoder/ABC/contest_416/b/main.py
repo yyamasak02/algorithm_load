@@ -1,2 +1,6 @@
-# 群の中で一個を●にする。
-print(("#" + input()).replace("#.", "#o")[1:])
+def main():
+    return
+
+
+if __name__ == "__main__":
+    main()

@@ -1,13 +1,24 @@
-# 単語を辞書順に並べ、X番目を単語の組み合わせで決定する。
-n, k, x = map(int, input().split())
-d = [input() for _ in range(n)]
-d.sort()
+def main():
+    concat_strings = []
+    N, K, X = map(int, input().split())
+    strings = [input() for _ in range(N)]
 
-ans = []
-for i in range(k):
-    block = n ** (k - 1 - i)
-    idx = (x - 1) // block
-    ans.append(d[idx])
-    x = x - idx * block
+    def create_patterns(n: int, k: int, pattern: tuple, depth: int):
+        if depth == k:
+            tmp_strs = []
+            for p in pattern:
+                tmp_strs.append(strings[p])
+            concat_strings.append("".join(tmp_strs))
+            return
+        for i in range(n):
+            tmp = pattern + (i,)
+            create_patterns(n, k, tmp, depth + 1)
 
-print("".join(ans))
+    create_patterns(N, K, (), 0)
+    concat_strings.sort()
+    print(concat_strings[X - 1])
+    return
+
+
+if __name__ == "__main__":
+    main()

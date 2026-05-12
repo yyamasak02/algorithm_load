@@ -1,14 +1,14 @@
-s = input()
-len_s = len(s)
-num = 0
-prev = 0
-for i in range(len_s):
-    if s[i] == "#":
-        num += 1
-        flag = True
-    else:
-        flag = False
-    if num % 2 == 1 and flag is True:
-        prev = i + 1
-    if num % 2 == 0 and flag is True:
-        print(f"{prev},{i+1}")
+def main():
+    S = input()
+    first = -1
+    for i in range(len(S)):
+        if S[i] == "#" and first != -1:
+            print(f"{first + 1},{i + 1}")
+            first = -1
+        elif S[i] == "#":
+            first = i
+    return
+
+
+if __name__ == "__main__":
+    main()

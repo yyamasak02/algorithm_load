@@ -1,8 +1,6 @@
-n = int(input())
-a = list(map(int, input().split()))
-r = int(input())
+def main():
+    return
 
-if r in a:
-    print("Yes")
-else:
-    print("No")
+
+if __name__ == "__main__":
+    main()

@@ -33,17 +33,5 @@ def main():
                 result = False
         return result
 
-    counter = 0
-    # pprint(fields)
-    for y in range(H):
-        for x in range(W):
-            if visited[y][x] is False and fields[y][x] == ".":
-                # print(y, x)
-                counter += dfs(y, x)
-                # print("-----------------------")
-    print(counter)
-    return
 
-
-if __name__ == "__main__":
-    main()
+cd

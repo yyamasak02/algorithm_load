@@ -12,7 +12,7 @@ def main():
         prev = S[i]
     # print(f"{pi} ~ {i}")
     result += (i - pi + 1) * (i - pi) // 2
-    print(result)
+    print(result % 998244353)
     return
 
 

@@ -1,5 +1,5 @@
-a_ascii = ord('A')
-z_ascii = ord('Z')
+a_ascii = ord("A")
+z_ascii = ord("Z")
 
 s = input()
 ans = []

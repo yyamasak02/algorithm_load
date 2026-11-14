@@ -1,4 +1,3 @@
-
 def solve(n, a) -> int:
     ans = n + 2
     d = {}
@@ -9,7 +8,6 @@ def solve(n, a) -> int:
             ans = min(ans, i - d[a[i]][-1] + 1)
             d[a[i]].append(i)
     return -1 if ans == n + 2 else ans
-        
 
 
 if __name__ == "__main__":

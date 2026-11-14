@@ -4,19 +4,20 @@ def get_run_length_encoding(P: list[int]) -> list[tuple[str, int]]:
     count: int = 0
     for i in range(1, N):
         if P[i] > P[i - 1]:
-            if (dir_flag == ">"):
+            if dir_flag == ">":
                 run_length_encoding.append((dir_flag, count))
                 count = 0
             dir_flag = "<"
             count += 1
         else:
-            if (dir_flag == "<"):
+            if dir_flag == "<":
                 run_length_encoding.append((dir_flag, count))
                 count = 0
             dir_flag = ">"
             count += 1
     run_length_encoding.append((dir_flag, count))
     return run_length_encoding
+
 
 if __name__ == "__main__":
     N: int = int(input())
@@ -28,5 +29,5 @@ if __name__ == "__main__":
         exit(0)
     for i in range(1, len(run_length_encoding) - 1):
         if run_length_encoding[i][0] == ">":
-            ans += run_length_encoding[i-1][1] * run_length_encoding[i+1][1]
+            ans += run_length_encoding[i - 1][1] * run_length_encoding[i + 1][1]
     print(ans)

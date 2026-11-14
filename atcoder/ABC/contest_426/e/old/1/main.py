@@ -1,5 +1,5 @@
-import sys
 import math
+import sys
 
 
 def dist2(ax, ay, bx, by):
@@ -37,7 +37,7 @@ def min_distance(tsx, tsy, tgx, tgy, asx, asy, agx, agy):
 
         a = vx * vx + vy * vy
         b = 2 * (sx * vx + sy * vy)
-        c = sx * sx + sy * sy
+        sx * sx + sy * sy
 
         if a == 0:
             candidates = [l, r]

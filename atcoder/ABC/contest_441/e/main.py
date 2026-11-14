@@ -1,5 +1,5 @@
 def main():
-    n = int(input())
+    int(input())
     s = list(input())
     ac, bc = 0, 0
     for c in s:

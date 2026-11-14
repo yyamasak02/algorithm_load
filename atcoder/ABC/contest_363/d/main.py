@@ -30,7 +30,7 @@ def main():
             num = (10 ** (half_digit - i - 1)) * 1
         if half_digit % 2 == 0:
             div = rank // num
-            mod = rank % num
+            rank % num
             if i == 0:
                 d = div + 1
             else:
@@ -40,7 +40,7 @@ def main():
             rank -= num * div
         else:
             div = rank // num
-            mod = rank % num
+            rank % num
             if i == 0:
                 d = div + 1
             else:

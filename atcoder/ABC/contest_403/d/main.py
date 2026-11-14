@@ -1,10 +1,7 @@
-
-
-
 def solve(p_t) -> int:
     if not p_t:
         return 0
-    return 
+    return
 
 
 if __name__ == "__main__":
@@ -14,6 +11,7 @@ if __name__ == "__main__":
     for i in a:
         ct[i] += 1
 
+    ans = 0
     for i in range(d):
         ans += solve(ct[i::d])
         print(ct[i::d])

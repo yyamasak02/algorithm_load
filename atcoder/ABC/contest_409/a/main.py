@@ -6,4 +6,4 @@ for i in range(n):
         print("Yes")
         break
 else:
-    print("No") 
+    print("No")

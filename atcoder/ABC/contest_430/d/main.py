@@ -1,5 +1,6 @@
 import sys
 from bisect import bisect_left
+
 from sortedcontainers import SortedList
 
 
@@ -39,7 +40,7 @@ input = sys.stdin.readline
 
 
 def main():
-    xSize: int = int(input())
+    int(input())
     xList: list[int] = list(map(int, input().split()))
 
     # number, minNearIndex

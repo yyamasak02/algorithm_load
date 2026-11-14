@@ -1,10 +1,10 @@
 if __name__ == "__main__":
-    n,s = map(int , input().split())
-    t = list(map(int , input().split()))
+    n, s = map(int, input().split())
+    t = list(map(int, input().split()))
     diff = []
     t.insert(0, 0)
     for i in range(n):
-        diff.append(t[i+1] - t[i])
+        diff.append(t[i + 1] - t[i])
     diff.sort(reverse=True)
     if len(diff) == 0:
         print("Yes")
@@ -15,4 +15,3 @@ if __name__ == "__main__":
                 break
         else:
             print("Yes")
-

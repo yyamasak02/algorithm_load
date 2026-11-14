@@ -1,4 +1,3 @@
-
 def lotate(s):
     n = len(s)
     m = len(s[0])
@@ -9,6 +8,7 @@ def lotate(s):
             tmp += s[n - 1 - i][j]
         res.append(tmp)
     return res
+
 
 def same_numbers(s, t):
     n = len(s)
@@ -33,10 +33,7 @@ if __name__ == "__main__":
         t.append(tmp)
     ans = 10**9
     for i in range(4):
-        diff = int(n*n) - same_numbers(s, t)
+        diff = int(n * n) - same_numbers(s, t)
         ans = min(ans, diff + i)
         s = lotate(s)
     print(ans)
-
-
-

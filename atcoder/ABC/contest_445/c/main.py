@@ -6,11 +6,11 @@ def main():
     visited = [False] * N
     result = [-1] * N
     for i in range(N):
-        if visited[i] == True:
+        if visited[i] is True:
             continue
         tmp = i
         group = []
-        while visited[tmp] != True:
+        while visited[tmp] is not True:
             visited[tmp] = True
             group.append(tmp)
             tmp = A[tmp]

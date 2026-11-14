@@ -1,7 +1,5 @@
 def main():
     n = int(input())
-    pairs = []
-    p = [0]
     # number, parent, additional, layer
     d = {i: [0, 0, 0, 0] for i in range(n + 1)}
     for i in range(1, n + 1):

@@ -1,7 +1,7 @@
 import argparse
 import os
-import shutil
 import re
+import shutil
 
 
 def main():

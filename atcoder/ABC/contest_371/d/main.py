@@ -1,10 +1,10 @@
-from bisect import bisect_left, bisect_right
 import sys
+from bisect import bisect_left, bisect_right
 
 
 def main():
     input = sys.stdin.readline
-    n = int(input())
+    int(input())
     xList = list(map(int, input().split()))
     pList = list(map(int, input().split()))
     unionList: list[tuple] = list(zip(xList, pList))

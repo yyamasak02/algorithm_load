@@ -5,7 +5,7 @@ def main():
         tmp_list = S.split("xx")
         result_set = []
         chunks = len(tmp_list)
-        prev_left, prev_right, prev_deletable = 0, 0, 0
+        prev_left, _prev_right, prev_deletable = 0, 0, 0
         for i in range(chunks):
             s = tmp_list[i]
             size = len(s)
@@ -20,7 +20,7 @@ def main():
                     prev_deletable : len(tmp_list[i - 1]) - deletable
                 ]
                 result_set.append(f"{target_str}xx")
-            prev_left, prev_right, prev_deletable = left, right, deletable
+            prev_left, _prev_right, prev_deletable = left, right, deletable
         target_str = tmp_list[-1][prev_deletable::]
         result_set.append(f"{target_str}")
         return "".join(result_set)

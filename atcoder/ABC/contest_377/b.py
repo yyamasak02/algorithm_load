@@ -12,4 +12,3 @@ for i in range(8):
 
 available_zone = sum(columns) * sum(lines)
 print(available_zone)
-            

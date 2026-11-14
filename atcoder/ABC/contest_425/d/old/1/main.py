@@ -1,5 +1,5 @@
-from collections import deque
 import sys
+from collections import deque
 
 
 def inside(x: int, y: int, w: int, h: int) -> bool:

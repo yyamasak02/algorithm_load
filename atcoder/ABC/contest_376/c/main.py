@@ -8,16 +8,16 @@ b_num = 0
 
 for i in range(n):
     omotya_size = a[i]
-    if b_num >= n-1 and new == 0:
+    if b_num >= n - 1 and new == 0:
         new = omotya_size
         break
-    elif b_num >= n-1:
+    elif b_num >= n - 1:
         new = -1
         break
     hako_size = b[b_num]
     if (omotya_size > hako_size) and new == 0:
         new = omotya_size
-    elif (omotya_size > hako_size):
+    elif omotya_size > hako_size:
         new = -1
         break
     else:

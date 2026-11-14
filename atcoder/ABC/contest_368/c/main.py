@@ -3,7 +3,7 @@ import sys
 
 def main():
     input = sys.stdin.readline
-    n = int(input())
+    int(input())
     a = list(map(int, input().split()))
     t = 0
     minus = (1, 1, 3, 1, 1, 3)

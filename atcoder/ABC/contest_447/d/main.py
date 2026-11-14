@@ -18,7 +18,6 @@ def main():
     counter = 0
     size_c = len(c_list)
     start_a, start_c = 0, 0
-    already = set()
     while b_list:
         index = b_list.popleft()
         # print("target b index: ", index)

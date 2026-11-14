@@ -1,6 +1,6 @@
 def main():
     target = ["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
-    N = int(input())
+    int(input())
     S = list(map(str, input().split()))
     ans = []
     for s in S:

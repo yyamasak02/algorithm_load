@@ -12,13 +12,14 @@ def solve(n, s):
         else:
             if start != -1:
                 end = i
-                l.append(end-start)
+                l.append(end - start)
                 start = -1
     if start != -1:
-        l.append((n-start))
+        l.append((n - start))
     print(l)
     print(diff)
     return None
+
 
 if __name__ == "__main__":
     t = int(input())

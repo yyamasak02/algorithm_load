@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     # col_list[x][y][z]
-    col_list = [[[] for _ in range(n)] for _ in range(n)]
+    [[[] for _ in range(n)] for _ in range(n)]
     ll = []
     for i in range(n):
         tmp = []

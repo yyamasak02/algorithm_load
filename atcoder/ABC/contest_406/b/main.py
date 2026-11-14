@@ -1,5 +1,5 @@
-N,K = map(int,input().split())
-a = list(map(int,input().split()))
+N, K = map(int, input().split())
+a = list(map(int, input().split()))
 res = 1
 for i in range(N):
     res *= a[i]

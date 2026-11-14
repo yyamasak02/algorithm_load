@@ -3,7 +3,6 @@ def main():
     bits = 2 ** (n)
     dp = [[float("inf")] * (bits) for i in range(m + 1)]
     # pprint(dp)
-    bits_array: list[int] = []
     for i in range(m):
         a = list(map(int, input().split()))
         v = 0

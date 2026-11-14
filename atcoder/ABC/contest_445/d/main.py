@@ -16,7 +16,7 @@ def main():
         if (
             hi < N
             and sorted_height[hi][0] == H - (sh - 1)
-            and placed[sorted_height[hi][2]] == False
+            and placed[sorted_height[hi][2]] is False
         ):
             piece = sorted_height[hi]
             placed[piece[2]] = True
@@ -26,7 +26,7 @@ def main():
         elif (
             wi < N
             and sorted_width[wi][1] == W - (sw - 1)
-            and placed[sorted_width[wi][2]] == False
+            and placed[sorted_width[wi][2]] is False
         ):
             piece = sorted_width[wi]
             placed[piece[2]] = True
@@ -36,7 +36,7 @@ def main():
         else:
             hi += 1
             wi += 1
-        # The line `print("remain: ", H - sh + 1, W - sw + 1)` is calculating and printing the
+        # The line `print("remain: ", H - sh + 1, W - sw + 1)` calculates and prints the
         # remaining space available for placing pieces in the grid.
         # print("remain: ", H - sh + 1, W - sw + 1)
     for q in positions:

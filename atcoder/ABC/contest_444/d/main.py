@@ -1,7 +1,7 @@
 def main():
     N = int(input())
     A = sorted(list(map(int, input().split())))
-    lists = [0] * (10**7)
+    [0] * (10**7)
     s_digit = 0
     target = 0
     for i in range(N):

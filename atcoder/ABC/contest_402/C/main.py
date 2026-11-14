@@ -1,6 +1,6 @@
 N, M = map(int, input().split())
-dish_needs = []  
-dishes = {j+1: [] for j in range(N)}
+dish_needs = []
+dishes = {j + 1: [] for j in range(N)}
 unavailable_count = [0] * M
 counter = M
 is_disliked = [False] * (N + 1)

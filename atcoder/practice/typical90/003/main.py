@@ -3,12 +3,16 @@
 # first_to = 0
 # connect_list_passed: list[int] = [-1 for i in range(n+1)]
 # connect_dict: dict[int, set] = {}
-# connect_passed_dict: dict[int, set] = {i:[False for j in range(n+1)] for i in range(1, n+1)}
+# connect_passed_dict: dict[int, set] = {
+#     i: [False for j in range(n + 1)] for i in range(1, n + 1)
+# }
 
 # def dfs(from_num, to_num, current_num):
 #     if connect_passed_dict[from_num][to_num] == True:
 #         return
-#     if (current_num <= connect_list_passed[to_num]) or connect_list_passed[to_num] == -1:
+#     if (current_num <= connect_list_passed[to_num]) or (
+#         connect_list_passed[to_num] == -1
+#     ):
 #         connect_list_passed[to_num] = current_num
 #     current_num = connect_list_passed[to_num]
 #     connect_passed_dict[from_num][to_num] = True
@@ -37,6 +41,7 @@
 
 from collections import defaultdict, deque
 
+
 def find_farthest(start, connect_dict):
     visited = [-1] * (n + 1)
     visited[start] = 0
@@ -52,6 +57,7 @@ def find_farthest(start, connect_dict):
                 if visited[neighbor] > visited[farthest_node]:
                     farthest_node = neighbor
     return farthest_node, visited[farthest_node]
+
 
 n = int(input())
 connect_dict = defaultdict(list)

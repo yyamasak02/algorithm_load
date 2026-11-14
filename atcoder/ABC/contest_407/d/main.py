@@ -1,12 +1,12 @@
 def solve(h, w, fields):
     # 初期状態（ドミノなし）
     possible_domino = [0]
-    
+
     # 縦横のドミノのパターン
     domino_vertical = (1 << w) + 1
     print(bin(domino_vertical))
     domino_horizontal = 3
-    
+
     # 各マスについてドミノの配置を試す
     for i in range(h):
         for j in range(w):
@@ -22,7 +22,7 @@ def solve(h, w, fields):
                     tmp.append(b | (domino_vertical << bit))
             print(tmp)
             possible_domino.extend(tmp)
-    
+
     # 各配置パターンに対してXORを計算
     ans = 0
     print(possible_domino)
@@ -34,8 +34,9 @@ def solve(h, w, fields):
                 if not (b & (1 << bit)):  # ドミノが置かれていないマス
                     now ^= fields[i][j]
         ans = max(ans, now)
-    
+
     return ans
+
 
 if __name__ == "__main__":
     h, w = map(int, input().split())

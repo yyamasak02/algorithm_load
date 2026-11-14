@@ -5,7 +5,7 @@ def main():
         exit(0)
 
     A = list(map(int, input().split()))
-    total, last_seen, is_seen = 0, -100, True
+    total, last_seen, _is_seen = 0, -100, True
     for i in range(N):
         if A[i] - last_seen >= 100:
             total += A[i] - last_seen - 100

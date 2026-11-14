@@ -1,6 +1,6 @@
 def main():
     H, W, Q = map(int, input().split())
-    fields = [[False] * W for _ in range(H)]
+    [[False] * W for _ in range(H)]
     h, w = H, W
     for _ in range(Q):
         sig, target = map(int, input().split())

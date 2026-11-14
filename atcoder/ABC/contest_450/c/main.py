@@ -32,6 +32,3 @@ def main():
             if tmp is False:
                 result = False
         return result
-
-
-cd

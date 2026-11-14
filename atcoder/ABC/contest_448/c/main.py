@@ -3,7 +3,7 @@ def main():
     A = list(map(int, input().split()))
     number_with_ids = sorted([(i + 1, A[i]) for i in range(N)], key=lambda x: x[1])
     for _ in range(Q):
-        K = int(input())
+        int(input())
         B = set(map(int, input().split()))
         tmp = 0
         while True:

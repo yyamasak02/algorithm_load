@@ -1,4 +1,5 @@
 import sys
+
 from more_itertools import distinct_permutations
 
 
@@ -9,7 +10,6 @@ def main():
     answers = 0
     for tmp in distinct_permutations(s, n):
         tmp = "".join(tmp)
-        is_ok = True
         for i in range(n - k + 1):
             for j in range(k):
                 if tmp[i + j] != tmp[i + k - j - 1]:

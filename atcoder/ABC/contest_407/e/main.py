@@ -1,16 +1,18 @@
 def generate_parentheses(n):
     result = []
+
     def backtrack(s, left, right):
         if len(s) == 2 * n:
             result.append(s)
             return
         if left < n:
-            backtrack(s + '(', left + 1, right)
+            backtrack(s + "(", left + 1, right)
         if right < left:
-            backtrack(s + ')', left, right + 1)
-    
-    backtrack('', 0, 0)
+            backtrack(s + ")", left, right + 1)
+
+    backtrack("", 0, 0)
     return result
+
 
 def solve(n, a, length, patterns):
     ans = sum(a[:n])
@@ -24,12 +26,13 @@ def solve(n, a, length, patterns):
 
     return
 
+
 if __name__ == "__main__":
     t: int = int(input())
     patterns_dict = {}
     for _ in range(t):
         n = int(input())
-        if not n in patterns_dict:
+        if n not in patterns_dict:
             patterns_dict[n] = generate_parentheses(n)
         a = []
         for _ in range(2 * n):

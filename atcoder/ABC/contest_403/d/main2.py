@@ -1,6 +1,9 @@
-n,d = map(int, input().split())
+import bisect
+from dataclasses import dataclass
+
+n, d = map(int, input().split())
 a = list(map(int, input().split()))
- 
+
 numbers = {}
 for i in range(n):
     if a[i] not in numbers:
@@ -14,8 +17,6 @@ n = len(a)
 
 # check (Ai - Aj) != d
 
-import bisect
-from dataclasses import dataclass
 
 @dataclass
 class Deleted:
@@ -23,9 +24,9 @@ class Deleted:
     delete_num: int
     same: int
 
+
 def get_delete_dict(n, d, a) -> dict[int, Deleted]:
-    deleted_dict= {}
-    ans = 0
+    deleted_dict = {}
     for i in range(n):
         j = bisect.bisect_left(a, a[i] + d)
         if j < n and a[j] == a[i] + d:
@@ -39,9 +40,16 @@ def get_delete_dict(n, d, a) -> dict[int, Deleted]:
             deleted_dict[a[j]].delete_num += numbers[a[i]]
     return deleted_dict
 
+
 if __name__ == "__main__":
     ans: int = 0
-    result = dict(sorted(get_delete_dict(n, d, a).items(), key=lambda x: (x[1].delete_num, -x[1].same), reverse=False))
+    result = dict(
+        sorted(
+            get_delete_dict(n, d, a).items(),
+            key=lambda x: (x[1].delete_num, -x[1].same),
+            reverse=False,
+        )
+    )
     while len(result) > 0:
         key, value = result.popitem()
         ans += 1

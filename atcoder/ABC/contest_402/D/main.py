@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
 from collections import defaultdict
 
+n, m = map(int, input().split())
 group_dict = defaultdict(int)
 for _ in range(m):
     a, b = map(int, input().split())

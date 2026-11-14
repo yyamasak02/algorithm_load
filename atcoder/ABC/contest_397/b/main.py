@@ -20,4 +20,3 @@ elif s[0] == "i" and (current + res) % 2 == 1:
     print(res + 1)
 else:
     print(res + 1)
-

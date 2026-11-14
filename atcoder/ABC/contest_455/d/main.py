@@ -28,7 +28,7 @@ def main():
         # print(parent)
         # print(child)
         # print("--------------------")
-    visited = [False] * N
+    [False] * N
     result = [0] * N
     head = [i for i in range(N) if parent[i] == -1]
     # print(head)

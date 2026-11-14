@@ -37,7 +37,7 @@ def main():
                             ):
                                 tmp = k
                                 break
-                    if tmp == None:
+                    if tmp is None:
                         return False
                     result[j][i] = tmp
                     determined_list[tmp] = True

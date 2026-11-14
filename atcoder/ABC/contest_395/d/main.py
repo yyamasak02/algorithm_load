@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    n,q = map(int, input().split())
+    n, q = map(int, input().split())
     box_to_label = list(range(n))
     label_to_box = list(range(n))
     pigeon_to_box = list(range(n))

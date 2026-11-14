@@ -22,7 +22,7 @@ def main():
     visited[0] = True
     costs[0] = 0
     while deq:
-        pair = deq.popleft()
+        deq.popleft()
 
     return
 

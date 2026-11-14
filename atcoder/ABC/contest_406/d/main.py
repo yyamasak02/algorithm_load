@@ -1,7 +1,3 @@
-from collections import defaultdict
-
-
-
 if __name__ == "__main__":
     H, W, N = map(int, input().split())
     picked: list[bool] = [False] * N

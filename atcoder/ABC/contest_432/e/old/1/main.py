@@ -13,7 +13,7 @@ def main():
             x, y = int(query[1]) - 1, int(query[2])
             a[x] = y
         else:
-            l, r = int(query[1]), int(query[2])
+            _l, _r = int(query[1]), int(query[2])
             pass
     return
 

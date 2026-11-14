@@ -1,9 +1,10 @@
-import os
 import argparse
-import time
-import sys
-import yaml
+import os
 import subprocess
+import sys
+import time
+
+import yaml
 
 
 def init_config(path: str = "config.yml") -> dict:

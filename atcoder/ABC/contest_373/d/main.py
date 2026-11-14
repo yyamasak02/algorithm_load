@@ -16,7 +16,7 @@ def main():
     scores = [-1] * (n)
 
     for i in range(n):
-        if visited[i] == True:
+        if visited[i] is True:
             continue
         st = [i]
         scores[i] = 0

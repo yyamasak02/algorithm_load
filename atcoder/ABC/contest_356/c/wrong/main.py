@@ -6,7 +6,7 @@ def main():
     d = {}
     for _ in range(M):
         row = input().split()
-        C, A, R = int(row[0]), sorted(list(map(int, row[1:-1]))), row[-1]
+        _C, A, R = int(row[0]), sorted(list(map(int, row[1:-1]))), row[-1]
         target_combs = combinations(A, K)
         for comb in target_combs:
             if comb not in d:

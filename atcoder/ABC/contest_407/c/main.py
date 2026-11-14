@@ -3,8 +3,8 @@ digits = len(s)
 ans = 0
 
 for i in range(digits, 0, -1):
-    num = int(s[i-1])
-    if (i - 1 == digits - 1):
+    num = int(s[i - 1])
+    if i - 1 == digits - 1:
         prev = 0
     else:
         prev = int(s[i])

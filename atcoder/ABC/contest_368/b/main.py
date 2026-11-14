@@ -1,5 +1,5 @@
 def main():
-    n = int(input())
+    int(input())
     a = sorted(list(map(int, input().split())), reverse=True)
     c = 0
     while True:

@@ -5,7 +5,7 @@ def get_max_xor(fields, w, h):
         for j in range(w):
             current_xor ^= fields[i][j]
     max_xor = max(max_xor, current_xor)
-    
+
     for mask in range(1 << (h * w)):
         used = [[False for _ in range(w)] for _ in range(h)]
         valid = True
@@ -16,11 +16,11 @@ def get_max_xor(fields, w, h):
                     break
                 pos = i * w + j
                 if (mask >> pos) & 1:
-                    if j + 1 < w and not used[i][j] and not used[i][j+1]:
-                        used[i][j] = used[i][j+1] = True
+                    if j + 1 < w and not used[i][j] and not used[i][j + 1]:
+                        used[i][j] = used[i][j + 1] = True
                         domino_count += 1
-                    elif i + 1 < h and not used[i][j] and not used[i+1][j]:
-                        used[i][j] = used[i+1][j] = True
+                    elif i + 1 < h and not used[i][j] and not used[i + 1][j]:
+                        used[i][j] = used[i + 1][j] = True
                         domino_count += 1
                     else:
                         valid = False
@@ -34,6 +34,7 @@ def get_max_xor(fields, w, h):
                     current_xor ^= fields[i][j]
         max_xor = max(max_xor, current_xor)
     return max_xor
+
 
 if __name__ == "__main__":
     h, w = map(int, input().split())

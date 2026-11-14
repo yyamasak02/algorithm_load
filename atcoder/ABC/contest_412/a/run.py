@@ -1,16 +1,18 @@
+import argparse
 import os
 import subprocess
-import argparse
 import time
+
 
 def get_files():
     files = []
-    for root, dirs, filenames in os.walk('./tests'):
+    for root, dirs, filenames in os.walk("./tests"):
         for filename in filenames:
-            if filename.endswith('.txt'):
+            if filename.endswith(".txt"):
                 files.append(os.path.join(root, filename))
     files.sort()
     return files
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -19,31 +21,32 @@ def main():
     files = get_files()
 
     for file in files:
-        print(f'Running test: {file}')
+        print(f"Running test: {file}")
         try:
-            with open(file, 'r') as f:
+            with open(file, "r") as f:
                 start = time.perf_counter()
                 result = subprocess.run(
-                    ['python', 'main.py'],
+                    ["python", "main.py"],
                     stdin=f,
                     capture_output=True,
                     text=True,
-                    timeout=5
+                    timeout=5,
                 )
                 end = time.perf_counter()
                 elapsed_ms = (end - start) * 1000
             print(result.stdout)
-            print(f'Execution time: {elapsed_ms:.2f} ms')
+            print(f"Execution time: {elapsed_ms:.2f} ms")
             if result.stderr and not mode:
-                print('[stderr]')
+                print("[stderr]")
                 print(result.stderr)
         except subprocess.TimeoutExpired:
-            print('Error: Execution timed out')
+            print("Error: Execution timed out")
         except Exception as e:
             if mode:
                 continue
-            print(f'Error running test: {e}')
-        print('-----------------------------------\n')
+            print(f"Error running test: {e}")
+        print("-----------------------------------\n")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

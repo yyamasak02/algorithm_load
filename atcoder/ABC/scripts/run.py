@@ -6,6 +6,8 @@ import time
 
 import yaml
 
+ABC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def init_config(path: str = "config.yml") -> dict:
     with open(path, "r") as f:
@@ -61,6 +63,13 @@ def main():
     parser.add_argument("-d", "--dir", type=str, default=None)
     parser.add_argument("-t", "--target", type=str, default=None)
     args = parser.parse_args()
+    if args.dir is None:
+        print("[ERROR] --dir is required")
+        return
+    # 相対パスはカレントディレクトリ→ABCディレクトリの順で解決する
+    if not os.path.isabs(args.dir) and not os.path.isdir(args.dir):
+        args.dir = os.path.join(ABC_DIR, args.dir)
+    args.dir = os.path.abspath(args.dir)
     target_dir = f"{args.dir}/{args.target}"
     if args.pro not in ["python", "java", "rust"]:
         print(f"[ERROR] not support {args.pro}")

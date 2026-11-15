@@ -3,6 +3,8 @@ import os
 import re
 import shutil
 
+ABC_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -10,8 +12,8 @@ def main():
     args = parser.parse_args()
 
     contest = f"contest_{args.target}"
-    base = os.path.join("..", contest)
-    template = "../contest_template"
+    base = os.path.join(ABC_DIR, contest)
+    template = os.path.join(ABC_DIR, "contest_template")
 
     if not os.path.isdir(base):
         print(f"[ERROR] not found: {base}")
